@@ -91,3 +91,8 @@ For the final gradient boosting model we selected, the most important features (
 Overall for both approaches above, we see the `income` and `transportation` (most often used mode of transportation) columns are really important. In addition, `daily_travel_distance` and whether they have witnessed conflict between e-biker/pedestrian are important.
 
 ## Survey redesign
+
+Consider adding the following question:
+
+* How much money do you spend on transportation per month (estimated)? This can be broken down into how much one spends on public transit (passes), how much one spends on insurance, and how much one spends on gas.
+* How often does one use public transportation?
