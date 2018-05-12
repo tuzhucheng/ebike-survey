@@ -60,4 +60,34 @@ For `sex`, we use the "Other" category for values that are neither "Male" nor "F
 
 ## Significant features
 
+We can determine statistically significant features based on looking at the p-values in logistic regression.
+
+The following features are statistically significant at the `p = 0.01` significance value (see how this is done in the Logistic Regression section of `modelling.ipynb`):
+
+```
+'income': 1.4329802224819224e-16
+'transportation_private_motor' (Use private motor vehicle/motorcycle/car most often for transportation): 4.0597339173149075e-10
+'c2' (Witnessed conflict between an e-biker and a pedestrian): 0.0026123504960698183
+'a6' (Use Multi-Use trail to mostly walk with a stroller young child or pet): 0.004643488834474009
+'s7' (Support the statement 'Most e-bikes are able to accelerate more quickly than an average cyclist of average fitness'): 0.0064340199799708744
+'daily_travel_distance': 0.008464917839580881
+```
+
+For the final gradient boosting model we selected, the most important features (found in `modelling.ipynb`) are:
+
+```
+'income': 0.14570680896504565
+'transportation_private_motor': 0.099920837161514023,
+'s9' (Support the statement 'E-bikes should be required to have insurance'): 0.050663763243510601,
+'transportation_bicycle' (Use bike/rollerblades/skate most often for transportation): 0.045270803680559621,
+'c2' (Witnessed conflict between an e-biker and a pedestrian): 0.041939525088299352,
+'transportation_pedal' (Use pedal assist type e-bike most often for transportation): 0.040714473708275717,
+'daily_travel_distance': 0.036378843333114197,
+'age_18 to 34': 0.035872911410122027,
+'transportation_scooter' (Use scooter type e-bike most often for transportation): 0.031048465340632447,
+'district_Central Toronto York or East York': 0.03101523689475846
+```
+
+Overall for both approaches above, we see the `income` and `transportation` (most often used mode of transportation) columns are really important. In addition, `daily_travel_distance` and whether they have witnessed conflict between e-biker/pedestrian are important.
+
 ## Survey redesign
